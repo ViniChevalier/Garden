@@ -1,0 +1,94 @@
+<!--
+*CA 1
+*@Vinícius Araújo
+*09/11/24
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - The Garden Shop</title>
+  <link rel="stylesheet" href="CSS_JS/external.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header id="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html" aria-label="Home">
+        <img src="Pictures/GardenShop.png" alt="Garden Shop Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html" aria-label="Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="plants.html" aria-label="Garden Plants">Garden Plants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" aria-label="Contact Us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contact Form Section -->
+  <div class="container-fluid my-5">
+    <h2 id="contact" class="text-center">Contact Form</h2>
+    <ul class="list-unstyled text-danger font-weight-bold">
+      <li> - Please make sure you enter your email address correctly in the form below.</li>
+      <li> - Failure to do so means that when we reply, you won't be able to receive our email.</li>
+      <li> - Also check your email spam/junk folder if you have not received a reply within normal business hours.</li>
+    </ul>
+    <form class="contact-form" action="#" method="POST" novalidate>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" aria-label="Name" required>
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" aria-label="Email" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" class="form-control" aria-label="Subject" required>
+          <option value="" disabled selected>Select a subject</option>
+          <option value="wrong-order">Wrong Order</option>
+          <option value="product-query">Query about Product</option>
+        </select>
+        <div class="invalid-feedback">Please select a subject.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" class="form-control" aria-label="Message" required></textarea>
+        <div class="invalid-feedback">Please enter your message.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+
+  <!-- Script -->
+  <script src="CSS_JS/contact-form.js" defer></script> <!-- Script for the forms -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- library used for effects and animations (Navbar) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Library used for managing pop-ups, tooltips, and other floating elements on the page -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Framework that helps with creating responsive layouts -->
+
+</body>
+
+</html>

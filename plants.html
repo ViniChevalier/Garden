@@ -1,0 +1,105 @@
+<!--
+*CA 1
+*@Vinícius Araújo
+*09/11/24
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plants - The Garden Shop</title>
+  <link rel="stylesheet" href="CSS_JS/external.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header id="header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html" aria-label="Home">
+        <img src="Pictures/GardenShop.png" alt="Garden Shop Logo" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html" aria-label="Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="plants.html" aria-label="Garden Plants">Garden Plants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" aria-label="Contact Us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Cart button in the header -->
+    <div class="cart">
+      <button id="cart-button" class="btn btn-outline-success" data-toggle="modal" data-target="#cartModal">Cart
+        (0)</button>
+    </div>
+  </header>
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="cartItems">
+          <p>The cart is empty.</p>
+        </div>
+        <div class="modal-footer">
+          <p id="total-price">Total: €0.00</p>
+          <button id="clear-cart" class="btn btn-danger">Clear Cart</button>
+          <button id="checkout" class="btn btn-success">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plants Section -->
+  <section class="container mt-5">
+    <div class="row" id="plant-list">
+      <!-- Plant Cards -->
+      <div class="col-md-4 mb-4" v-for="plant in plants" :key="plant.id">
+        <div class="card">
+          <img :src="plant.image" class="card-img-top" :alt="plant.name">
+          <div class="card-body">
+            <h5 class="card-title">{{ plant.name }}</h5>
+            <p class="card-text">{{ plant.description }}</p>
+            <p class="card-price">Price: €{{ plant.price.toFixed(2) }}</p>
+            <label for="quantity">Quantity:</label>
+            <select class="quantity" v-model="plant.quantity">
+              <option v-for="n in 10" :key="n" :value="n">{{ n }}</option>
+            </select>
+            <button class="btn btn-primary buy-button" @click="addToCart(plant)">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- library used for effects and animations (Navbar) -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js"></script> <!-- Framework used to create dynamic components easily -->
+  <script src="CSS_JS/plants.js"></script> <!-- Script to insert plant data -->
+  <script src="CSS_JS/cart.js"></script> <!-- Script for cart functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Library used for managing pop-ups, tooltips, and other floating elements on the page -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Framework that helps with creating responsive layouts -->
+
+</body>
+
+</html>
