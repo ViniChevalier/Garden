@@ -216,7 +216,7 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 992px) {
 
   /* Header Styling */
   #header {
