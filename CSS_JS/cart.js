@@ -4,7 +4,7 @@
 *09/11/24
 */
 
-function cart() {
+document.addEventListener('DOMContentLoaded', () => {
   // Select elements 
   const cartButton = document.getElementById('cart-button');
   const buyButtons = document.querySelectorAll('.buy-button');
@@ -76,4 +76,4 @@ function cart() {
       alert('Your cart looks empty!');
     }
   });
-};
+});
