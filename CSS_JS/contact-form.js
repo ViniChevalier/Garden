@@ -1,20 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
+/*
+*CA 1
+*@Vinícius Araújo
+*09/11/24
+*/
+
+function submitForm() {
+
+  // Select the element
   const form = document.querySelector('.contact-form');
 
-  form.addEventListener('submit', function (event) {
-    // Prevent submission if form is incorrect or invalid
-    if (!form.checkValidity()) {
-      event.preventDefault();
-      event.stopPropagation();
-    } else {
-    // Confirmation
-      const confirmed = confirm('Are you sure you want to submit the form?');
-    if (!confirmed) {
-    // Cancels
-      event.preventDefault();
+    // Add an event listener to the form's 'submit' event
+    form.addEventListener('submit', function (event) {
+      // Check if the form is valid
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      } else {
+        // Ask for confirmation to submit the form
+        const confirmed = confirm('Would you like to continue with submitting the form?');
+        if (!confirmed) {
+          event.preventDefault();
+        }
       }
-    }
-    // Add Bootstrap validation
-    form.classList.add('was-validated');
-  }, false);
-});
+      // Add Bootstrap's
+      form.classList.add('was-validated');
+    }, false);
+}

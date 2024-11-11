@@ -50,7 +50,7 @@
       <li> - Failure to do so means that when we reply, you won't be able to receive our email.</li>
       <li> - Also check your email spam/junk folder if you have not received a reply within normal business hours.</li>
     </ul>
-    <form class="contact-form" action="#" method="POST" novalidate>
+    <form class="contact-form" novalidate>
       <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" class="form-control" aria-label="Name" required>
@@ -67,8 +67,10 @@
         <label for="subject">Subject:</label>
         <select id="subject" name="subject" class="form-control" aria-label="Subject" required>
           <option value="" disabled selected>Select a subject</option>
-          <option value="wrong-order">Wrong Order</option>
-          <option value="product-query">Query about Product</option>
+          <option value="wrong-order">Wrong order</option>
+          <option value="product-query">Product query</option>
+          <option value="my-order-didnt-arrive">My order didn’t arrive</option>
+          <option value="general-questions">General questions</option>
         </select>
         <div class="invalid-feedback">Please select a subject.</div>
       </div>
@@ -79,15 +81,15 @@
         <div class="invalid-feedback">Please enter your message.</div>
       </div>
 
-      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      <button type="submit" class="btn btn-primary mt-3" aria-label="Submit Contact Form">Submit</button>
     </form>
   </div>
 
   <!-- Script -->
-  <script src="CSS_JS/contact-form.js" defer></script> <!-- Script for the forms -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- library used for effects and animations (Navbar) -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Library used for managing pop-ups, tooltips, and other floating elements on the page -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Framework that helps with creating responsive layouts -->
+  <script src="CSS_JS/contact-form.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
