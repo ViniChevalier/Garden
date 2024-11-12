@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cart.total += price * quantity;
 
     // Update the cart button display
-    if (count > 0) {
+    if (cart.count > 0) {
       cartButton.textContent = `Cart (${cart.count})`;
       cartLogo.src = "Pictures/shopping_cart.svg";
     } else {
