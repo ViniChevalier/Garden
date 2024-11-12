@@ -1,9 +1,3 @@
-/*
-*CA 1
-*@Vinícius Araújo
-*09/11/24
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
   // Select elements 
   const cartButton = document.getElementById('cart-button');
@@ -11,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartItemsContainer = document.getElementById('cartItems');
   const clearCartButton = document.getElementById('clear-cart');
   const checkoutButton = document.getElementById('checkout');
+  const cartLogo = document.getElementById('cart-logo');
 
   // Initialize objects
   let cart = { items: [], count: 0, total: 0 };
@@ -44,8 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update the cart button display
     cartButton.textContent = `Cart (${cart.count})`;
-    cartLogo.src = "Pictures/shopping_cart.svg";
-    updateCartDisplay();
+    if (cartLogo) cartLogo.src = "Pictures/shopping_cart.svg";
     alert(`${quantity}x ${productTitle} item(s) have been added to your cart.`);
   }
 
@@ -62,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   clearCartButton.addEventListener('click', () => {
     cart = { items: [], count: 0, total: 0 };
     cartButton.textContent = 'Cart (0)';
-    cartLogo.src = "Pictures/shopping_cart.svg";
+    if (cartLogo) cartLogo.src = "Pictures/shopping_cart.svg";
     updateCartDisplay();
   });
 
@@ -72,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Your purchase was successful!');
       cart = { items: [], count: 0, total: 0 };
       cartButton.textContent = 'Cart (0)';
-      cartLogo.src = "Pictures/shopping_cart.svg";
+      if (cartLogo) cartLogo.src = "Pictures/shopping_cart.svg";
       updateCartDisplay();
     } else {
       alert('Your cart looks empty!');
