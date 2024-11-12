@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Format currency to Euro
   const formatCurrency = (value) => new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' }).format(value);
 
-  //Function for buyButton
+  // Function for buyButton
   buyButtons.forEach(button => {
     button.addEventListener('click', (event) => addToCart(event));
   });
@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     cartButton.textContent = `Cart (${cart.count})`;
     if (cartLogo) cartLogo.src = "Pictures/shopping_cart.svg";
     alert(`${quantity}x ${productTitle} item(s) have been added to your cart.`);
+
+    // Call updateCartDisplay to refresh the display
+    updateCartDisplay();
   }
 
   // Function to update the cart display
