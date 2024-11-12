@@ -44,16 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update the cart button display
     cartButton.textContent = `Cart (${cart.count})`;
-
+    cartLogo.src = "Pictures/shopping_cart.svg";
     updateCartDisplay();
     alert(`${quantity}x ${productTitle} item(s) have been added to your cart.`);
-  }
-  if (cart.count > 0) {
-    cartButton.textContent = `Cart (${cart.count})`;
-    cartLogo.src = "Pictures/shopping_cart.svg";
-  } else {
-    cartButton.textContent = "Cart (0)";
-    cartLogo.src = "Pictures/shopping_cart.svg";
   }
 
   // Function to update the cart display
@@ -69,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   clearCartButton.addEventListener('click', () => {
     cart = { items: [], count: 0, total: 0 };
     cartButton.textContent = 'Cart (0)';
+    cartLogo.src = "Pictures/shopping_cart.svg";
     updateCartDisplay();
   });
 
@@ -78,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Your purchase was successful!');
       cart = { items: [], count: 0, total: 0 };
       cartButton.textContent = 'Cart (0)';
+      cartLogo.src = "Pictures/shopping_cart.svg";
       updateCartDisplay();
     } else {
       alert('Your cart looks empty!');
