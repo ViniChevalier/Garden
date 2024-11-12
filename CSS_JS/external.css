@@ -40,17 +40,6 @@
   padding-right: 1em;
 }
 
-#header h1 {
-  height: inherit;
-  line-height: inherit;
-  padding-left: 1.5em;
-  white-space: nowrap;
-}
-
-#header h1 a {
-  font-size: 1.4rem;
-}
-
 #header .links {
   flex: 1;
   border-left: 1px solid rgba(160, 160, 160, 0.3);
@@ -68,52 +57,6 @@
 #header .links ul li {
   border-left: 1px solid rgba(160, 160, 160, 0.3);
   padding-left: 1em;
-}
-
-#header .links ul li:first-child {
-  border-left: 0;
-  padding-left: 0;
-}
-
-#header .links ul li a {
-  font-family: 'California', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.9em;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  padding: 0.5em;
-}
-
-#header .main {
-  text-align: center;
-}
-
-#header .main ul {
-  display: flex;
-  justify-content: center;
-}
-
-#header .main ul li {
-  white-space: nowrap;
-}
-
-#header .main ul li>a {
-  text-decoration: none;
-  color: #aaaaaa;
-  width: 4em;
-  text-indent: 4em;
-  position: relative;
-}
-
-#header .main ul li>a:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: inherit;
-  text-align: center;
 }
 
 /* Body Styling */
