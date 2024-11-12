@@ -215,15 +215,6 @@ body {
   color: white;
 }
 
-#cart-logo {
-  color: #28a745;
-}
-
-#cart-logo:hover {
-  background-color: #28a745;
-  color: white;
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
 

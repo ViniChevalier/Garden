@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartItemsContainer = document.getElementById('cartItems');
   const clearCartButton = document.getElementById('clear-cart');
   const checkoutButton = document.getElementById('checkout');
-  const cartLogo = document.getElementById('cart-logo');
+
 
   // Initialize objects
   let cart = { items: [], count: 0, total: 0 };
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update the cart button display
     cartButton.textContent = `Cart (${cart.count})`;
-    if (cartLogo) cartLogo.src = "Pictures/shopping_cart.svg";
     alert(`${quantity}x ${productTitle} item(s) have been added to your cart.`);
 
     // Call updateCartDisplay to refresh the display
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
   clearCartButton.addEventListener('click', () => {
     cart = { items: [], count: 0, total: 0 };
     cartButton.textContent = 'Cart (0)';
-    if (cartLogo) cartLogo.src = "Pictures/shopping_cart.svg";
     updateCartDisplay();
   });
 
@@ -69,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Your purchase was successful!');
       cart = { items: [], count: 0, total: 0 };
       cartButton.textContent = 'Cart (0)';
-      if (cartLogo) cartLogo.src = "Pictures/shopping_cart.svg";
       updateCartDisplay();
     } else {
       alert('Your cart looks empty!');
