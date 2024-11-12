@@ -43,16 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
     cart.total += price * quantity;
 
     // Update the cart button display
-    if (cart.count > 0) {
-      cartButton.textContent = `Cart (${cart.count})`;
-      cartLogo.src = "Pictures/shopping_cart.svg";
-    } else {
-      cartButton.textContent = "Cart (0)";
-      cartLogo.src = "Pictures/shopping_cart.svg";
-    }
+    cartButton.textContent = `Cart (${cart.count})`;
 
     updateCartDisplay();
     alert(`${quantity}x ${productTitle} item(s) have been added to your cart.`);
+  }
+  if (cart.count > 0) {
+    cartButton.textContent = `Cart (${cart.count})`;
+    cartLogo.src = "Pictures/shopping_cart.svg";
+  } else {
+    cartButton.textContent = "Cart (0)";
+    cartLogo.src = "Pictures/shopping_cart.svg";
   }
 
   // Function to update the cart display
