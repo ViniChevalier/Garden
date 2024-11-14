@@ -1,3 +1,10 @@
+/*
+*CA 1
+*@Vinícius Araújo dos Santos
+*Student ID: 23409622
+*14/11/24
+*/
+
 document.addEventListener('DOMContentLoaded', () => {
   // Select elements 
   const cartButton = document.getElementById('cart-button');
