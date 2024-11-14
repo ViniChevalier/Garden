@@ -4,11 +4,12 @@
 *09/11/24
 */
 
-function submitForm() {
-
-  // Select the element
+document.addEventListener('DOMContentLoaded', function() {
+  // Select the form element
   const form = document.querySelector('.contact-form');
 
+  // Ensure the form exists before attaching event listeners
+  if (form) {
     // Add an event listener to the form's 'submit' event
     form.addEventListener('submit', function (event) {
       // Check if the form is valid
@@ -22,7 +23,8 @@ function submitForm() {
           event.preventDefault();
         }
       }
-      // Add Bootstrap's
+      // Add Bootstrap's validation style class
       form.classList.add('was-validated');
     }, false);
-}
+  }
+});
